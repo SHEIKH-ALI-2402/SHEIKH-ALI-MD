@@ -6,115 +6,39 @@ const { igdl } = require("ruhend-scraper");
 const axios = require("axios");
 const { cmd, commands } = require('../command');
 
-
 cmd({
-  'pattern': "tiktok",
-  'alias': ['tt'],
-  'react': '🎥',
-  'desc': "download tt videos",
-  'category': "download",
-  'filename': __filename
-}, async (conn, m, store, {
-  from,
-  quoted,
-  body,
-  isCmd,
-  command,
-  args,
-  q,
-  isGroup,
-  sender,
-  senderNumber,
-  botNumber2,
-  botNumber,
-  pushname,
-  isMe,
-  isOwner,
-  groupMetadata,
-  groupName,
-  participants,
-  groupAdmins,
-  isBotAdmins,
-  isAdmins,
-  reply
-}) => {
+  pattern: "ig",
+  alias: ["insta", "Instagram"],
+  desc: "To download Instagram videos.",
+  react: "🎥",
+  category: "download",
+  filename: __filename
+}, async (conn, m, store, { from, q, reply }) => {
   try {
-    if (!q && !q.startsWith('https://')) {
-      return reply("*`Need url`*");
+    if (!q || !q.startsWith("http")) {
+      return reply("❌ Please provide a valid Instagram link.");
     }
-    store.react('⬇️');
-    let tiktokData = await downloadTiktok(q);
-    let captionMessage = 
-      "╭━━━〔 *SHEIKH-ALI-MD* 〕━━━┈⊷\n" +
-      "┃▸╭───────────\n" +
-      "┃▸┃๏ *TIKTOK DOWNLOADER*\n" +
-      "┃▸└───────────···๏\n" +
-      "╰────────────────┈⊷\n" +
-      "╭━━━❐━⪼\n" +
-      `┇๏ *Title* - ${tiktokData.result.title} \n` +
-      "╰━━━❐━⪼\n" +
-      "╭━❮ *Download Video* ❯━┈⊷\n" +
-      "┃▸╭─────────────·๏\n" +
-      "┃▸┃๏ *1*     ┃  *SD Quality*\n" +
-      "┃▸┃๏ *2*     ┃  *HD Quality*\n" +
-      "┃▸└────────────┈⊷\n" +
-      "╰━━━━━━━━━━━━━━━⪼\n" +
-      "╭━❮ *Download Audio* ❯━┈⊷\n" +
-      "┃▸╭─────────────·๏\n" +
-      "┃▸┃๏ *3*     ┃  *Audio*\n" +
-      "┃▸└────────────┈⊷\n" +
-      "╰━━━━━━━━━━━━━━━⪼\n" +
-      "> *© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡*";
 
-    const sentMessage = await conn.sendMessage(from, {
-      'image': { 'url': tiktokData.result.image },
-      'caption': captionMessage
+    await conn.sendMessage(from, {
+      react: { text: "⏳", key: m.key }
     });
 
-    const messageID = sentMessage.key.id;
+    const response = await axios.get(`https://api.davidcyriltech.my.id/instagram?url=${q}`);
+    const data = response.data;
 
-    conn.ev.on("messages.upsert", async message => {
-      const receivedMessage = message.messages[0];
-      if (!receivedMessage.message) return;
+    if (!data || data.status !== 200 || !data.downloadUrl) {
+      return reply("⚠️ Failed to fetch Instagram video. Please check the link and try again.");
+    }
 
-      const userResponse = receivedMessage.message.conversation || 
-                           receivedMessage.message.extendedTextMessage?.["text"];
-      const chatID = receivedMessage.key.remoteJid;
-      const isReplyToBotMessage = receivedMessage.message.extendedTextMessage &&
-                                  receivedMessage.message.extendedTextMessage.contextInfo.stanzaId === messageID;
+    await conn.sendMessage(from, {
+      video: { url: data.downloadUrl },
+      mimetype: "video/mp4",
+      caption: "📥 *Instagram Video Downloaded Successfully!*"
+    }, { quoted: m });
 
-      if (isReplyToBotMessage) {
-        await conn.sendMessage(chatID, {
-          'react': { 'text': '⬇️', 'key': receivedMessage.key }
-        });
-
-        let downloadLinks = tiktokData.result;
-
-        await conn.sendMessage(chatID, {
-          'react': { 'text': '⬆️', 'key': receivedMessage.key }
-        });
-
-        if (userResponse === '1') {
-          await conn.sendMessage(chatID, {
-            'video': { 'url': downloadLinks.dl_link.download_mp4_1 },
-            'caption': "*© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡*"
-          }, { 'quoted': receivedMessage });
-        } else if (userResponse === '2') {
-          await conn.sendMessage(chatID, {
-            'video': { 'url': downloadLinks.dl_link.download_mp4_2 },
-            'caption': "*© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡*"
-          }, { 'quoted': receivedMessage });
-        } else if (userResponse === '3') {
-          await conn.sendMessage(chatID, {
-            'audio': { 'url': downloadLinks.dl_link.download_mp3 },
-            'mimetype': "audio/mpeg"
-          }, { 'quoted': receivedMessage });
-        }
-      }
-    });
   } catch (error) {
-    console.log(error);
-    reply('' + error);
+    console.error("Error:", error);
+    reply("❌ An error occurred while processing your request. Please try again.");
   }
 });
 
@@ -402,60 +326,6 @@ cmd({
   }
 });
 
-// Instagram-dl
-
-cmd({
-  pattern: "ig",
-  alias: ["insta", "Instagram"],
-  desc: "To download Instagram videos.",
-  react: "🎥",
-  category: "download",
-  filename: __filename
-}, async (conn, m, store, {
-  from,
-  quoted,
-  q,
-  reply
-}) => {
-  try {
-    if (!q || !q.startsWith("http")) {
-      return reply("❌ Please provide a valid Instagram link.");
-    }
-
-    await conn.sendMessage(from, {
-      react: { text: "⏳", key: m.key }
-    });
-
-    const response = await axios.get(`https://www.dark-yasiya-api.site/download/instagram?url=${q}`);
-    const data = response.data;
-
-    if (!data || !data.status || !data.result) {
-      return reply("⚠️ Failed to fetch Instagram video. Please check the link and try again.");
-    }
-
-    await conn.sendMessage(from, {
-      react: { text: "⬆️", key: m.key }
-    });
-
-    for (const media of data.result) {
-      if (media.url) {
-        await conn.sendMessage(from, {
-          video: { url: media.url },
-          mimetype: "video/mp4",
-          caption: "📥 *Instagram Video Downloaded Successfully!*"
-        }, { quoted: m });
-
-        await conn.sendMessage(from, {
-          react: { text: "✅", key: m.key }
-        });
-      }
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    reply("❌ An error occurred while processing your request. Please try again.");
-  }
-});
-
 // apk-dl
 
 cmd({
@@ -494,7 +364,7 @@ cmd({
 ┃ 📅 *Updated On:* ${app.updated}
 ┃ 👨‍💻 *Developer:* ${app.developer.name}
 ╰━━━━━━━━━━━━━━━┈⊷
-🔗 *© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡*`;
+*© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡*`;
 
     await conn.sendMessage(from, { react: { text: "⬆️", key: m.key } });
 

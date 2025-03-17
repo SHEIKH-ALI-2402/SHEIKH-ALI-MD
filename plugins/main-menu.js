@@ -22,7 +22,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃★│ Platform : *Heroku*
 ┃★│ Mode : *[${config.MODE}]*
 ┃★│ Prefix : *[${config.PREFIX}]*
-┃★│ Version : *3.0.0 Bᴇᴛᴀ*
+┃★│ Version : *2.0.0 Bᴇᴛᴀ*
 ┃★╰──────────────
 ╰━━━━━━━━━━━━━━━┈⊷
 ╭━━〔 *Download Menu* 〕━━┈⊷
@@ -109,12 +109,43 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• tagadmins
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
+╭━━〔 *Reactions Menu* 〕━━┈⊷
+┃◈╭─────────────·๏
+┃◈┃• bully @tag
+┃◈┃• cuddle @tag
+┃◈┃• cry @tag
+┃◈┃• hug @tag
+┃◈┃• awoo @tag
+┃◈┃• kiss @tag
+┃◈┃• lick @tag
+┃◈┃• pat @tag
+┃◈┃• smug @tag
+┃◈┃• bonk @tag
+┃◈┃• yeet @tag
+┃◈┃• blush @tag
+┃◈┃• smile @tag
+┃◈┃• wave @tag
+┃◈┃• highfive @tag
+┃◈┃• handhold @tag
+┃◈┃• nom @tag
+┃◈┃• bite @tag
+┃◈┃• glomp @tag
+┃◈┃• slap @tag
+┃◈┃• kill @tag
+┃◈┃• happy @tag
+┃◈┃• wink @tag
+┃◈┃• poke @tag
+┃◈┃• dance @tag
+┃◈┃• cringe @tag
+┃◈└───────────┈⊷
+╰──────────────┈⊷
 ╭━━〔 *Owner Menu* 〕━━┈⊷
 ┃◈╭─────────────·๏
 ┃◈┃• owner
 ┃◈┃• menu
 ┃◈┃• menu2
 ┃◈┃• vv
+┃◈┃• listcmd
 ┃◈┃• allmenu
 ┃◈┃• repo
 ┃◈┃• block
@@ -192,8 +223,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• blackbox
 ┃◈┃• luma
 ┃◈┃• dj 
-┃◈┃• khan
-┃◈┃• jawad
+┃◈┃• sheikh
+┃◈┃• ali
 ┃◈┃• gpt4
 ┃◈┃• bing
 ┃◈┃• imagine 
@@ -287,7 +318,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.ibb.co/YdSKMhv/6767.jpg` },
+                image: { url: `https://i.ibb.co/chcyQbkP/Snapchat-850352165.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -295,7 +326,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363333032882285@newsletter',
-                        newsletterName: '𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃',
+                        newsletterName: '𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡',
                         serverMessageId: 143
                     }
                 }
@@ -305,7 +336,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Send audio
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/JawadYTX/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+            audio: { url: 'https://github.com/XdTechPro/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: mek });

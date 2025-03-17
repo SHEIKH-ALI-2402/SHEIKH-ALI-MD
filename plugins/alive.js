@@ -15,18 +15,18 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         // Generate system status message
         const status = `╭━━〔 *𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃* 〕━━┈⊷
 ┃◈╭─────────────·๏
-┃◈┃• *⏳ᴜᴘᴛɪᴍᴇ*:  ${runtime(process.uptime())} 
-┃◈┃• *📟 ʀᴀᴍ ᴜsᴀɢᴇ*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-┃◈┃• *⚙️ ʜᴏsᴛɴᴀᴍᴇ*: ${os.hostname()}
-┃◈┃• *👨‍💻 ᴏᴡɴᴇʀ*: 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼
-┃◈┃• *🧬 ᴠᴇʀsɪᴏɴ*: 3.0.0 BETA
+┃◈┃• *⏳Uptime*:  ${runtime(process.uptime())} 
+┃◈┃• *📟 Ram usage*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+┃◈┃• *⚙️ HostName*: ${os.hostname()}
+┃◈┃• *👨‍💻 Owner*: Jawad TechX
+┃◈┃• *🧬 Version*: 3.0.0 BETA
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼`;
+> © Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡`;
 
         // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://i.ibb.co/YdSKMhv/6767.jpg` },  // Image URL
+            image: { url: `https://i.ibb.co/chcyQbkP/Snapchat-850352165.jpg` },  // Image URL
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
@@ -34,7 +34,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363333032882285@newsletter',
-                    newsletterName: '𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃',
+                    newsletterName: '𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡',
                     serverMessageId: 143
                 }
             }

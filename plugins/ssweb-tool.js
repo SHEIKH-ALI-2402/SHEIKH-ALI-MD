@@ -1,4 +1,4 @@
-// code by ⿻ ⌜ 𝐒𝐇𝐄𝐈𝐊𝐇 ⌟⿻⃮͛🇵🇰𖤐
+// code by ⿻ ⌜ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ⌟⿻⃮͛🇵🇰𖤐
 
 const axios = require("axios");
 const config = require('../config');
@@ -24,7 +24,7 @@ async (conn, mek, m, {
   }
 
   try {
-    // created by jawad tech 
+    // created by 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡ 
     const response = await axios.get(`https://api.davidcyriltech.my.id/ssweb?url=${q}`);
     const screenshotUrl = response.data.screenshotUrl;
 
@@ -38,7 +38,7 @@ async (conn, mek, m, {
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
           newsletterJid: '120363333032882285@newsletter',
-          newsletterName: "𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃",
+          newsletterName: "𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡",
           serverMessageId: 143,
         },
       },
@@ -51,4 +51,4 @@ async (conn, mek, m, {
   }
 });
 
-// ⿻ ⌜ 𝐒𝐇𝐄𝐈𝐊𝐇 ⌟⿻⃮͛🇵🇰𖤐
+// ⿻ ⌜ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡ ⌟⿻⃮͛🇵🇰𖤐

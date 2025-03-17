@@ -51,13 +51,15 @@ cmd({
 📖 *Surah ${json.data.number}: ${json.data.asma.ar.long} (${json.data.asma.en.long})*\n
 💫Type: ${json.data.type.en}\n
 ✅Number of verses: ${json.data.ayahCount}\n
+⚡🔮 *Explanation (Urdu):*\n
+${translatedTafsirUrdu.text}\n
 ⚡🔮 *Explanation (English):*\n
 ${translatedTafsirEnglish.text}`;
 
     await conn.sendMessage(
       from,
       {
-        image: { url: `https://i.ibb.co/YdSKMhv/6767.jpg` },
+        image: { url: `https://i.ibb.co/chcyQbkP/Snapchat-850352165.jpg` },
         caption: quranSurah,
         contextInfo: {
           mentionedJid: [m.sender], 
@@ -65,7 +67,7 @@ ${translatedTafsirEnglish.text}`;
           isForwarded: true,   
           forwardedNewsletterMessageInfo: {
             newsletterJid: '120363333032882285@newsletter', 
-            newsletterName: '𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃', 
+            newsletterName: '𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡', 
             serverMessageId: 143
           }
         }
@@ -447,7 +449,7 @@ async (conn, mek, m, { from, quoted, body,isCmd, command, args, q, isGroup, send
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.ibb.co/YdSKMhv/6767.jpg` },
+                image: { url: `https://i.ibb.co/chcyQbkP/Snapchat-850352165.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -455,7 +457,7 @@ async (conn, mek, m, { from, quoted, body,isCmd, command, args, q, isGroup, send
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363333032882285@newsletter',
-                        newsletterName: '𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃',
+                        newsletterName: '𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡',
                         serverMessageId: 143
                     }
                 }
@@ -464,7 +466,7 @@ async (conn, mek, m, { from, quoted, body,isCmd, command, args, q, isGroup, send
         );
 
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/JawadYTX/KHAN-DATA/raw/refs/heads/main/autovoice/Quran.m4a' },
+            audio: { url: 'https://github.com/XdTechPro/KHAN-DATA/raw/refs/heads/main/autovoice/Quran.m4a' },
             mimetype: 'audio/mp4',
             ptt: false
         }, { quoted: mek });
