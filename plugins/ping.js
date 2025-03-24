@@ -2,7 +2,7 @@ const config = require('../config');
 const { cmd, commands } = require('../command');
 
 cmd({
-    pattern: "ping",
+    pattern: "ping2",
     alias: ["speed","pong"],use: '.ping',
     desc: "Check bot's response time.",
     category: "main",
@@ -32,7 +32,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         const end = new Date().getTime();
         const responseTime = (end - start) / 1000;
 
-        const text = `> *KHAN-MD SPEED: ${responseTime.toFixed(2)}ms ${reactionEmoji}*`;
+        const text = `> *SHEIKH-ALI-MD SPEED: ${responseTime.toFixed(2)}ms ${reactionEmoji}*`;
 
         await conn.sendMessage(from, {
             text,
@@ -57,7 +57,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
 // ping2 
 
 cmd({
-    pattern: "ping2",
+    pattern: "ping",
     desc: "Check bot's response time.",
     category: "main",
     react: "🍂",

@@ -54,7 +54,7 @@ cmd({
     };
 
     await conn.sendMessage(from, {
-      text: `✅ *Image Uploaded Successfully 📸*\n📏 *Size:* ${imageBuffer.length} Bytes\n🔗 *URL:* ${imageUrl}\n\n> ⚖️ *Uploaded via KHAN-AI*`,
+      text: `✅ *Image Uploaded Successfully 📸*\n📏 *Size:* ${imageBuffer.length} Bytes\n🔗 *URL:* ${imageUrl}\n\n> ⚖️ *Uploaded via SHEIKH-ALI-MD*`,
       contextInfo: msgContext
     });
 

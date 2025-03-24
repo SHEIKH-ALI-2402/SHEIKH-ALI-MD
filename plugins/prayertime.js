@@ -13,7 +13,7 @@ cmd({
 },
 async(conn, mek, m, {from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, isItzcp, groupAdmins, isBotAdmins, isAdmins, reply}) => {
     try {
-        const city = args.length > 0 ? args.join(" ") : "bhakkar"; // Default to Bhakkar if no city is provided
+        const city = args.length > 0 ? args.join(" ") : "renala khurd"; // Default to Bhakkar if no city is provided
         const apiUrl = `https://api.nexoracle.com/islamic/prayer-times?city=${city}`;
 
         const response = await fetch(apiUrl);

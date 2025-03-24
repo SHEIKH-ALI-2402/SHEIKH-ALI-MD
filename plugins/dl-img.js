@@ -37,7 +37,7 @@ cmd({
                 from,
                 {
                     image: { url: image.src },
-                    caption: `*Results For:* ${query}\n\n> *BY SHEIKH ALI MD ❤️‍🩹*`
+                    caption: `*Results For:* ${query}\n\n> *BY SHEIKH-ALI-MD ❤️‍🩹*`
                 },
                 { quoted: mek }
             );

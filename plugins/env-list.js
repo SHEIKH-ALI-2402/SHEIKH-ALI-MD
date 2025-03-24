@@ -19,7 +19,7 @@ cmd({
 async (conn, mek, m, { from, quoted, reply }) => {
     try {
         // Define the settings message with the correct boolean checks
-        let envSettings = `╭━━━〔 *𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃* 〕━━━┈⊷
+        let envSettings = `╭━━━〔 *SHEIKH-ALI-MD* 〕━━━┈⊷
 ┃▸╭───────────
 ┃▸┃๏ *ENV SETTINGS 🗿*
 ┃▸└───────────···๏

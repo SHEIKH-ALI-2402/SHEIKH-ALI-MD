@@ -21,8 +21,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃★│ Type : *NodeJs*
 ┃★│ Platform : *Heroku*
 ┃★│ Mode : *[${config.MODE}]*
-┃★│ Prefix : *[${config.PREFIX}]*
-┃★│ Version : *2.0.0 Bᴇᴛᴀ*
+┃★│ Prifix : *[${config.PREFIX}]*
+┃★│ Version : *3.0.0 Bᴇᴛᴀ*
 ┃★╰──────────────
 ╰━━━━━━━━━━━━━━━┈⊷
 ╭━━〔 *Download Menu* 〕━━┈⊷
@@ -145,7 +145,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• menu
 ┃◈┃• menu2
 ┃◈┃• vv
-┃◈┃• listcmd
 ┃◈┃• allmenu
 ┃◈┃• repo
 ┃◈┃• block
@@ -223,8 +222,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• blackbox
 ┃◈┃• luma
 ┃◈┃• dj 
-┃◈┃• sheikh
-┃◈┃• ali
+┃◈┃• khan
+┃◈┃• jawad
 ┃◈┃• gpt4
 ┃◈┃• bing
 ┃◈┃• imagine 
@@ -318,15 +317,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.ibb.co/chcyQbkP/Snapchat-850352165.jpg` },
+                image: { url: `https://files.catbox.moe/7zfdcq.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363333032882285@newsletter',
-                        newsletterName: '𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡',
+                        newsletterJid: '120363354023106228@newsletter',
+                        newsletterName: 'JawadTechX',
                         serverMessageId: 143
                     }
                 }

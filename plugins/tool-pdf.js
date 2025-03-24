@@ -4,7 +4,7 @@ const { Buffer } = require('buffer');
 
 cmd({
     pattern: "topdf",
-    alias: "pdf",
+    alias: ["pdf","topdf"],use: '.topdf',
     desc: "Convert provided text to a PDF file.",
     react: "📄",
     category: "utilities",
@@ -29,7 +29,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 caption: `
 *📄 PDF created successully!*
 
-> © Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ 💜`
+© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡`
             }, { quoted: mek });
         });
 

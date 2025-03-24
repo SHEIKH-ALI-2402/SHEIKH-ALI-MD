@@ -9,7 +9,7 @@ var cants = "I cant find this anime."
 
 //====================================================================================
 cmd({
-    pattern: "girl",
+    pattern: "garl",
     alias: ["imgloli"],
     react: '😎',
     desc: "Download anime loli images.",
@@ -280,7 +280,7 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 
-let dec = `> SHEIKH-ALI-MD ANIME IMGS*`
+let dec = `> KHAN-MD ANIME IMGS*`
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/b26f27aa5daaada031b90.jpg`},caption:dec},{quoted:mek});
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/51b44e4b086667361061b.jpg`},caption:dec},{quoted:mek});
 await conn.sendMessage(from,{image:{url: `https://telegra.ph/file/7d165d73f914985542537.jpg`},caption:dec},{quoted:mek});
@@ -442,9 +442,9 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const response = await axios.get(apiUrl);
         const data = response.data;
 
-        await conn.sendMessage(from, { image: { url: data.message }, caption: '> *© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡> ' }, { quoted: mek });
+        await conn.sendMessage(from, { image: { url: data.message }, caption: '> *© Powered By KHANX-AI> ' }, { quoted: mek });
     } catch (e) {
-        console.log(e); // ❯❯ © Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡ 👑
+        console.log(e); // ❯❯ Powered by KHAN-MD 👑
         reply(`єяяσя ƒєт¢нιηg ∂σg ιмαgє: ${e.message}`);
     }
 });

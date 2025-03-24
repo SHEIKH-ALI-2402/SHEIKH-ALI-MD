@@ -82,7 +82,7 @@ cmd({
 
         if (logoUrls[receivedText]) {
           let response = await fetchJson(`https://api-pink-venom.vercel.app/api/logo?url=${logoUrls[receivedText]}&name=${q}`);
-          await conn.sendMessage(from, { image: { url: response.result.download_url }, caption: "> *© Powered By JawadTechX*" }, { quoted });
+          await conn.sendMessage(from, { image: { url: response.result.download_url }, caption: "> *© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡*" }, { quoted });
         } else {
           reply("*_Invalid number. Please reply with a valid number._*");
         }

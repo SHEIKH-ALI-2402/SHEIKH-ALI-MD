@@ -42,7 +42,7 @@ async (conn, mek, m, { from }) => {
 ┃◈┃• *Tiktok*: https://www.tiktok.com/@sheikh_ali_2412
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-> © Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡`, // Display the owner's details
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡`, // Display the owner's details
             contextInfo: {
                 mentionedJid: [`${ownerNumber.replace('+', '')}@s.whatsapp.net`], 
                 forwardingScore: 999,
