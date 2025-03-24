@@ -17,9 +17,9 @@ AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*ʏᴏᴜʀ sᴛᴀᴛᴜs sᴇ
 // set the auto reply massage on status reply  
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃",
+BOT_NAME: process.env.BOT_NAME || "SHEIKH-ALI-MD",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "𝐒𝐇𝐄𝐈𝐊𝐇-𝐀𝐋𝐈-𝐌𝐃",
+STICKER_NAME: process.env.STICKER_NAME || "SHEIKH-ALI-MD",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
@@ -33,7 +33,7 @@ OWNER_NAME: process.env.OWNER_NAME || "𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯
 // add bot owner name
 DESCRIPTION: process.env.DESCRIPTION || "*© Pᴏᴡᴇʀᴇᴅ Bʏ 𓄂𝕚𝕥𝕩.𝑺𝑯𝑬𝑰𝑲𝑯 𝑨𝑳𝑰 🔥༽༼ ♡*",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://i.ibb.co/chcyQbkP/Snapchat-850352165.jpg",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://i.ibb.co/yc3j9Qdw/8490.jpg",
 // add img for alive msg
 LIVE_MSG: process.env.LIVE_MSG || "> Zinda Hun Yar *SHEIKH-ALI-MD*⚡",
 // add alive msg here 
@@ -65,7 +65,7 @@ DEV: process.env.DEV || "923143702270",
 //replace with your whatsapp number        
 ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
-ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "same", 
+ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "log", 
 // change it to 'same' if you want to resend deleted message in same chat 
 AUTO_RECORDING: process.env.AUTO_RECORDING || "false"
 // make it true for auto recoding 
